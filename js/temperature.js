@@ -30,16 +30,21 @@ $(document).ready(function () {
         handle.text(ui.value);
         changeColor(ui.value, handle);
 
+        saveTemperatureValue(ui.value);
+    };
+
+    var saveTemperatureValue = function (value) {
         $.ajax({
             type: "POST",
             dataType: 'JSON',
             url: 'http://localhost:8080/data/temperature.json',
-            data: ('"temperature":' + ui.value),
+            data: ('"temperature":' + value),
             success: function (data) {
                 message(data);
             }
         });
     };
+
     var changeColor = function (value, handle) {
         var redColor = "#e50000";
         var yellowColor = "#ffff7f";

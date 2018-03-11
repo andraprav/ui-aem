@@ -1,6 +1,5 @@
 .button {
     border: none;
-    color: #767673;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -27,19 +26,4 @@ button:disabled {
 .dark {
     background-color: #767673;
     color: #ffff7f;
-}
-
-.col1 {
-    float: left;
-    width: 30%;
-}
-
-.col2 {
-    float: left;
-    width: 30%;
-}
-
-.col3 {
-    float: left;
-    width: 30%;
 }
